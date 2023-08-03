@@ -1,0 +1,24 @@
+.body {
+  background-color: #ecfbf9;
+  background-image: url(/assets/Images/cafebg.jpg);
+  height: auto;
+  width: auto;
+}
+
+.registration-comp {
+  background-color: rgb(245, 246, 244);
+  border: solid rgb(249, 168, 168);
+}
+
+@media (min-width: 576px) {
+  .card {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    max-width: 600px;
+  }
+}

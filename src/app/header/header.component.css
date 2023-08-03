@@ -1,0 +1,78 @@
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.navbar-custom {
+  background-color: transparent;
+} */
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.colored-section {
+  background-color: #ff4c68;
+  color: #6c4e2a;
+}
+
+.white-section {
+  background-color: #6c4e2a;
+}
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.custom-nav .nav-link {
+  color: #ff4079;
+}
+
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: #ff8080;
+}
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+
+#title {
+  background-image: url(/assets/Images/headerbg.jpg);
+  background-color: #ffe0ce;
+  color: #ffd8d8;
+  text-align: center;
+}
+
+#title .container-fluid {
+  padding: 3% 10% 5%;
+}

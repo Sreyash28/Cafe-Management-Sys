@@ -1,0 +1,34 @@
+#carouselExampleFade {
+  width: 100%;
+  max-width: 95rem;
+  margin: 20px auto;
+  max-height: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.carousel-indicators {
+  bottom: 10px;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #000;
+}
+

@@ -1,0 +1,44 @@
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contact-form {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ced4da; /* Add border to the form container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow to the form container */
+}
+
+.contact-heading {
+  margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+  margin-top: 20px;
+}
+
+.btn-black {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
+
+.contact-form::after {
+  content: "";
+  display: table;
+  clear: both;
+}

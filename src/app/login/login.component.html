@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100 body">
+  <div class="card bg-white mt-5 mb-5 ml-5 mr-5">
+    <div class="card-body p-5 login-comp">
+      <form
+        class="mb-3"
+        action="/your-form-action"
+        method="post"
+        #loginForm="ngForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <img
+          src="/assets/Images/coffee.png"
+          alt="img"
+          class="img-fluid mx-auto d-block"
+          style="max-width: 100px"
+        />
+        <h2
+          class="fw-bold mb-2 mt-3 text-center"
+          style="font-family: 'Playfair Display', serif"
+        >
+          Login
+        </h2>
+        <p class="mb-6 text-center" style="margin: 25px">
+          <strong>Have a good day..!</strong>
+        </p>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter Email"
+            [(ngModel)]="user.email"
+            required
+            #email="ngModel"
+          />
+          <div
+            *ngIf="email.invalid && (email.dirty || email.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="email.errors?.['required']">Email is required.</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter Password"
+            [(ngModel)]="user.password"
+            required
+            #password="ngModel"
+          />
+          <div
+            *ngIf="password.invalid && (password.dirty || password.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="password.errors?.['required']">
+              Password is required.
+            </div>
+          </div>
+        </div>
+        <div class="d-grid" style="margin-top: 30px">
+          <button
+            type="submit"
+            class="btn btn-outline-dark"
+            [disabled]="!loginForm.valid"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+      <div>
+        <p class="mb-0 text-center" style="margin-top: 25px">
+          Don't have an account?
+          <a routerLink="/signup" class="text-dark fw-bold">Register Now</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

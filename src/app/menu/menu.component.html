@@ -1,0 +1,27 @@
+<div class="row" style="background-color: #F5F5F5">
+  <div class="col-lg-6 col-md-6 col-sm-12 col-12" *ngFor="let m of menu">
+    <div class="card mb-3 card-with-margin card-with-border card-with-shadow">
+      <div class="row g-0">
+        <div class="col-md-4 col-sm-12">
+          <img
+            [src]="getImageUrl(m)"
+            class="card-img-top img-fluid card-image"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8 col-sm-12">
+          <div class="card-body">
+            <h6 class="card-title text-center">ID: {{ m.id }}</h6>
+            <h3 class="card-subtitle mb-2 text-muted text-center name">
+              {{ m.itemName }}
+            </h3>
+            <p class="card-text price">Price: {{ m.itemPrice }}</p>
+            <p class="card-text text-center p">
+              "Awaken your taste buds here."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

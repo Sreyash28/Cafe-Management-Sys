@@ -1,0 +1,50 @@
+<div class="form-wrapper">
+  <div class="custom-form form-section">
+    <h2 class="form-title">Order Form</h2>
+
+    <div class="form-group">
+      <label for="userId">User ID:</label>
+      <input
+        type="number"
+        id="userId"
+        [(ngModel)]="user.id"
+        name="userId"
+        required
+        min="0"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="menu">Menu Item:</label>
+      <select id="menu" [(ngModel)]="selectedMenuItem">
+        <option value="" disabled selected>Select Menu Item</option>
+        <option *ngFor="let menuItem of menuItems" [ngValue]="menuItem">
+          {{ menuItem.itemName }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" [(ngModel)]="quantity" min="1" />
+    </div>
+
+    <button class="submit-button-small" (click)="addOrderItem()">
+      Add Item
+    </button>
+
+    <h2>Order Items:</h2>
+    <ul>
+      <li *ngFor="let orderItem of orderItems">
+        {{ orderItem.menu.itemName }} - {{ orderItem.quantity }} - ₹{{
+          orderItem.menu.itemPrice * orderItem.quantity
+        }}
+      </li>
+    </ul>
+    <p>Total: ₹{{ calculateTotal() }}</p>
+
+    <button class="submit-button-small" (click)="createOrder()">
+      Create Order
+    </button>
+  </div>
+</div>
